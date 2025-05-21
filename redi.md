@@ -574,7 +574,7 @@ $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$ ![width:680px ](figs/denoisin
 
 -  <span style="font-size:70%"> The channels of $\texttt{DINOv2}$ significantly exceeds that of $\texttt{VAE latent}$
 
-
+- Visual representations dominate model capacity at the expense of image latents.
 
 ![bg right width:600px ](figs/v_d.png)
 
