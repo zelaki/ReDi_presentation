@@ -202,7 +202,7 @@ marp-pre {
 
 ### Diffusion / Flow Models (in a nutshell)
 
-  - <span style="font-size:70%"> Given an Image $\mathbf{x}$ and Gaussina noise $\boldsymbol{\epsilon} \sim \mathcal{N}(0,I)$
+  - <span style="font-size:70%"> Given an Image $\mathbf{x}$ and Gaussian noise $\boldsymbol{\epsilon} \sim \mathcal{N}(0,I)$
 
   - <span style="font-size:70%"> Construct a time dependent noising process:
     - $\mathbf{x}_t = \alpha_t \mathbf{x} + \sigma_t \boldsymbol{\epsilon}$ 
