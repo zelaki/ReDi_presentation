@@ -190,7 +190,7 @@ marp-pre {
 
 <div align="center">
 
-#             $\;\;\;\;\;\;\;\;$ Boosting Generative Image Modeling via $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$ Joint Image Feature Syntheis
+#             $\;\;\;\;\;\;\;\;$ Boosting Generative Image Modeling via $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$ Joint Image Feature Synthesis
 
 </div>
 
@@ -216,17 +216,7 @@ $\;\;\;\;\;\;\;\;$ ![width:1000px ](figs/dm_overview.png)
 ---
 
 
-### Diffusion / Flow Models
 
-
-$\;\;\;\;\;\;\;\;$ ![width:1000px ](figs/dif_gif.webp)
-
-
-<div class="reference">Diffusion Models for Image Generation https://learnopencv.com/image-generation-using-diffusion-models/
-</div>
-
-
----
 
 
 
@@ -262,13 +252,11 @@ $\;\;\;\;\;\;\;\;$ ![width:1000px ](figs/denoising.png)
 
 ### The problem with the Denoising Objective 
 
-  - <span style="font-size:70%"> Loss funtion $\Vert \epsilon_\theta(\mathbf{x_t})  - \epsilon \Vert_2^2$
+ - The goal is purely to remove noise, regardless of the content.
 
+  - <span style="font-size:70%"> Doesn't distinguish between meaningful semantics and irrelevant image details.
 
-
-  - <span style="font-size:70%"> Not capable of eliminating unnecessary details in $\mathbf{x}$
-
-  - <span style="font-size:70%"> Does not result in good representations
+  - <span style="font-size:70%"> Does not result in (very) good representations
 
 
 
@@ -278,7 +266,7 @@ $\;\;\;\;\;\;\;\;$ ![width:1000px ](figs/denoising.png)
 ### DINO (in a nutshell)
 
 
--  <span style="font-size:70%">Take different crops from an image 
+-  <span style="font-size:70%">Take different "views" from an image 
 
 -  <span style="font-size:10%"> Force representations to be similar
 
@@ -382,20 +370,20 @@ $\;\;\;\;\;\;\;\;$ ![width:1000px ](figs/denoising.png)
 
 
 
-## ReDi: Joint image-feature Synthesis
+## ReDi: Joint Image-Feature Synthesis
 
 ###### 
 
 
 
-$\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad$ ![width:150px ](figs/teaser_1.png)
+$\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$ ![width:650px ](figs/joint.png)
 
 
 
 ---
 
 
-## ReDi: Joint image-feature Synthesis
+## ReDi: Joint Image-Feature Synthesis
 
 ###### Joint Forward Process
 
@@ -405,7 +393,7 @@ $\;\;\;\;\;\;\;\;$ ![width:980px ](figs/teaser_5.png)
 
 ---
 
-### ReDi: Joint image-feature Synthesis
+### ReDi: Joint Image-Feature Synthesis
 
 ###### Joint Reverse Process
 
@@ -419,7 +407,7 @@ $\;\;\;\;\;\;\;\;$  ![width:980px ](figs/teaser_6.png)
 
 
 
-### ReDi: Joint image-feature Synthesis
+### ReDi: Joint Image-Feature Synthesis
 
 <br>
 
@@ -608,15 +596,15 @@ $\;\;\;\;\;\;\;\;\;\;$ ![ width:1000px ](figs/method.png)
 ## Represenation Guidance
 
 
--  <span style="font-size:70%">  Inspired by Classifier-Free Guidance.
+-  <span style="font-size:70%">  Same as  Classifier-Free Guidance but with Semantic Represenation as the condition.
 
 
 -  <span style="font-size:70%">  During inference we modify the posterior distribution to: $\hat{p}_\theta(\mathbf{x}_t, \mathbf{z}_t) \propto p_\theta(\mathbf{x}_t) p( \mathbf{z}_t \vert \mathbf{x}_t)^{w_r}$
 
 - Samples are pushed toward higher likelihood of the conditional distribution $p_\theta(\mathbf{z}_t | \mathbf{x}_t)$
 
-
 ---
+<!-- ---
 
 
 ## Represenation Guidance
@@ -686,7 +674,7 @@ $$
 $$
 
 
----
+--- -->
 
 ## Represenation Guidance
 
